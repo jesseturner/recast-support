@@ -1,5 +1,15 @@
-eumdac download \
-	--collection EO:EUM:DAT:MSG:HRSEVIRI \
-	--product @recast_seviri_products.txt \
-	--output-dir 'seviri_sample_hrit'\
-	--tailor 'product: HRSEVIRI, format: hrit' \
+for day in 2020-01-01 2020-01-02
+do
+    day_nodash=${day//-/}
+    dir="/mnt/sat/seviri/europe_hrit/$day_nodash"
+
+    mkdir -p "$dir"
+
+    eumdac download \
+        -c EO:EUM:DAT:MSG:HRSEVIRI \
+        --start ${day}T00:00:00 \
+        --end   ${day}T23:59:59 \
+        --chain "product: HRSEVIRI, format: hrit" \
+        --local-tailor dt_3_2 \
+        --output "$dir"
+done
