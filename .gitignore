@@ -4,4 +4,4 @@ seviri_sample_loop/*
 seviri_sample_nat/*
 seviri_sample_nat_unzipped/*
 epct_processing/*
-epct.log
+*.log
