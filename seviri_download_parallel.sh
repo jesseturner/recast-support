@@ -2,7 +2,7 @@
 
 MAX_JOBS=24
 
-start_date="2020-01-03"
+start_date="2020-02-13"
 
 for ((i=0; i<144; i++))
 do
