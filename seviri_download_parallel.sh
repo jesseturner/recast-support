@@ -1,8 +1,8 @@
 #!/bin/bash
 
-MAX_JOBS=24
+MAX_JOBS=48
 
-start_date="2020-02-13"
+start_date="2020-03-31"
 
 for ((i=0; i<144; i++))
 do
@@ -38,6 +38,7 @@ do
         done
     done
 
-    # Wait for all 24 hours of this day before moving to next day
-    wait
-done
+done    
+
+# Wait for any remaining downloads
+wait
