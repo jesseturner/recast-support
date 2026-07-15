@@ -1,4 +1,4 @@
-for day in 2020-01-01 2020-01-02
+for day in 2020-03-03
 do
     day_nodash=${day//-/}
     dir="/mnt/sat/seviri/europe_hrit/$day_nodash"

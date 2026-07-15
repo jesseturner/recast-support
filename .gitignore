@@ -5,3 +5,4 @@ seviri_sample_nat/*
 seviri_sample_nat_unzipped/*
 epct_processing/*
 *.log
+eumdac_search_results.txt
