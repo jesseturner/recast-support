@@ -1,10 +1,10 @@
 #!/bin/bash
 
-MAX_JOBS=48
+MAX_JOBS=24
 
-start_date="2020-03-31"
+start_date="2020-07-05"
 
-for ((i=0; i<144; i++))
+for ((i=0; i<365; i++))
 do
     day=$(date -d "$start_date + $i days" +"%Y-%m-%d")
     day_nodash=${day//-/}
@@ -38,7 +38,9 @@ do
         done
     done
 
-done    
+    # Wait until every hour for this day has completed
+    wait
 
-# Wait for any remaining downloads
-wait
+    echo "===== Finished $day ====="
+
+done    
